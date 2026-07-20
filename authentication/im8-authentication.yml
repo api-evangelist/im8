@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://im8health.com/.well-known/openid-configuration
+type: Authentication
+description: >-
+  Authentication profile for the IM8 Health storefront's buyer-scoped APIs, derived
+  from the store's Shopify Customer Account OpenID Connect / OAuth 2.0 discovery
+  documents. Read-only catalog browsing (product/collection JSON, search) requires
+  no authentication; account- and purchase-scoped operations use OAuth 2.0
+  Authorization Code with PKCE.
+schemes:
+- name: shopify_customer_account_oauth2
+  type: oauth2
+  flow: authorization_code
+  pkce: true
+  pkce_methods:
+  - S256
+  issuer: https://shopify.com/authentication/63744606375
+  authorization_endpoint: https://account.im8health.com/authentication/oauth/authorize
+  token_endpoint: https://account.im8health.com/authentication/oauth/token
+  end_session_endpoint: https://account.im8health.com/authentication/logout
+  jwks_uri: https://account.im8health.com/authentication/.well-known/jwks.json
+  token_endpoint_auth_methods:
+  - client_secret_basic
+  grant_types:
+  - authorization_code
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  response_types:
+  - code
+  id_token_signing_alg:
+  - RS256
+  scopes:
+  - openid
+  - email
+  - customer-account-api:full
+  - customer-account-mcp-api:full
+- name: none
+  type: none
+  description: Read-only storefront browsing (collections, product JSON, search) needs no auth.
+notes:
+- OpenID Connect is supported (openid scope, id_token RS256, standard OIDC claims).
+- customer-account-mcp-api:full scope authorizes MCP-driven access to customer account data.
