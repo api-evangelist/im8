@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://im8health.com/.well-known/
+type: WellKnown
+host: im8health.com
+description: >-
+  Well-known and agent-discovery documents served at the IM8 Health storefront
+  host (Shopify platform). Each path was probed on 2026-07-19; 200 responses were
+  saved verbatim alongside this index.
+paths:
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: application/json
+  file: im8-openid-configuration.json
+  note: >-
+    Shopify Customer Account OpenID Connect discovery. issuer
+    https://shopify.com/authentication/63744606375; endpoints on account.im8health.com.
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: application/json
+  file: im8-oauth-authorization-server.json
+  note: RFC 8414 OAuth 2.0 authorization server metadata (identical payload to openid-configuration).
+- path: /.well-known/ucp
+  status: 200
+  content_type: application/json
+  file: im8-ucp.json
+  note: >-
+    Universal Commerce Protocol merchant profile (version 2026-04-08). Advertises the
+    hosted MCP shopping endpoint, shopping capabilities, and payment handlers.
+- path: /llms.txt
+  status: 200
+  content_type: text/plain
+  file: ../llms/im8-llms.txt
+  note: Agent instructions mirroring /agents.md (saved under llms/).
+- path: /.well-known/security.txt
+  status: 404
+  note: Not published.
+- path: /.well-known/api-catalog
+  status: 404
+  note: Not published.
+- path: /.well-known/ai-plugin.json
+  status: 404
+  note: Not published.
+- path: /.well-known/jwks.json
+  status: 404
+  note: >-
+    Not at storefront host; JWKS is served at
+    https://account.im8health.com/authentication/.well-known/jwks.json (200).

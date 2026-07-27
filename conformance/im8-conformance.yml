@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://im8health.com/.well-known/openid-configuration
+type: Conformance
+description: >-
+  Cross-cutting standards conformance for the IM8 Health agent-commerce surface,
+  asserted from published discovery documents (OIDC/OAuth well-known, UCP profile).
+  conforms=true entries are evidenced by a live public document; false entries are
+  standards checked for and not found.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    RFC 6749 Authorization Code flow with client_secret_basic, refresh_token and
+    jwt-bearer grants advertised at /.well-known/oauth-authorization-server.
+- id: oauth2-authorization-server-metadata
+  conforms: true
+  evidence: RFC 8414 metadata document served at /.well-known/oauth-authorization-server.
+- id: oidc
+  conforms: true
+  evidence: >-
+    OpenID Connect discovery at /.well-known/openid-configuration; openid scope,
+    RS256 id_token, standard claims (iss, sub, aud, exp, iat, nonce, sid, email).
+- id: pkce
+  conforms: true
+  evidence: code_challenge_methods_supported=[S256] in OIDC discovery.
+- id: ucp
+  conforms: true
+  evidence: >-
+    Universal Commerce Protocol merchant profile (version 2026-04-08) at
+    /.well-known/ucp advertising shopping capabilities and payment handlers.
+- id: mcp
+  conforms: true
+  evidence: >-
+    Hosted MCP shopping endpoint at /api/ucp/mcp (JSON-RPC), referenced by the UCP
+    profile and /llms.txt.
+- id: llmstxt
+  conforms: true
+  evidence: /llms.txt published (mirrors /agents.md) with agent instructions.
+- id: security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on 2026-07-19.
+- id: rfc9457
+  conforms: false
+  evidence: No application/problem+json error surface documented for the storefront.

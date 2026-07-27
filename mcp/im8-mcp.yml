@@ -1,0 +1,65 @@
+generated: '2026-07-19'
+method: searched
+source: https://im8health.com/.well-known/ucp
+type: MCPServer
+name: IM8 Health UCP Shopping MCP
+status: live
+transport: mcp
+description: >-
+  Hosted Model Context Protocol (MCP) shopping endpoint exposed by the IM8 Health
+  Shopify storefront via the Universal Commerce Protocol (UCP). Discovered from the
+  store's /.well-known/ucp merchant profile and /llms.txt agent guide. The endpoint
+  is live: a JSON-RPC POST returns a structured UCP response (HTTP 422 without an
+  agent profile URI), confirming a real MCP server rather than a 404.
+endpoints:
+  storefront: https://im8health.com/api/ucp/mcp
+  canonical: https://im8store.myshopify.com/api/ucp/mcp
+ucp:
+  version: '2026-04-08'
+  supported_versions:
+  - '2026-04-08'
+  - '2026-01-23'
+  discovery: https://im8health.com/.well-known/ucp
+  service: dev.ucp.shopping
+  openrpc_schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+authentication:
+  note: >-
+    Read-only browsing needs no auth; buyer-scoped actions use Shopify Customer
+    Account OAuth 2.0 / OIDC (see authentication/im8-authentication.yml and
+    scopes/im8-scopes.yml, incl. customer-account-mcp-api:full).
+capabilities:
+- dev.ucp.shopping.catalog.search
+- dev.ucp.shopping.catalog.lookup
+- dev.ucp.shopping.cart
+- dev.ucp.shopping.checkout
+- dev.ucp.shopping.fulfillment
+- dev.ucp.shopping.discount
+- dev.ucp.shopping.order
+- dev.shopify.catalog
+# Tool names as documented in the store's /llms.txt "Typical Agent Flow".
+# Live tools/list requires an agent profile URI; use tools/list against the
+# endpoint with a valid UCP agent profile to enumerate exact schemas.
+tools:
+- name: search_catalog
+  status: documented
+  summary: Find products matching the buyer's intent (UCP catalog search).
+- name: create_cart
+  status: documented
+  summary: Create a cart and add desired items.
+- name: create_checkout
+  status: documented
+  summary: Start the purchase flow for a cart.
+- name: update_checkout
+  status: documented
+  summary: Set shipping address and delivery method on a checkout.
+- name: complete_checkout
+  status: documented
+  summary: Finalize the purchase; requires explicit buyer payment approval.
+rules:
+- Checkout requires contemporaneous human/buyer approval before payment.
+- MCP endpoint is rate-limited per IP; back off on HTTP 429.
+- Pass context.address_country and context.currency for accurate pricing/availability.
+payment_handlers:
+- com.google.pay
+- dev.shopify.card
+- dev.shopify.shop_pay

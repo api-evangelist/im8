@@ -1,22 +1,114 @@
 aid: im8
-name: Im8
-description: Im8 is a company surfaced as a portfolio company of general-catalyst and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: IM8 Health
+description: >-
+  IM8 Health is a health and wellness company whose flagship product, IM8 Daily
+  Ultimate Essentials, is a clinically studied, third-party tested all-in-one daily
+  supplement combining 90 nutrient-rich ingredients — vitamins, minerals, probiotics,
+  prebiotics, adaptogens and superfoods — into a single drink that replaces roughly
+  16 capsules. Co-founded by David Beckham and guided by a named scientific advisory
+  board, IM8 sells direct-to-consumer through its Shopify-powered online store at
+  im8health.com. That storefront exposes a modern agent-native commerce surface: a
+  Universal Commerce Protocol (UCP) merchant profile, a hosted Model Context Protocol
+  (MCP) shopping endpoint, an llms.txt / agents.md guide for AI shopping assistants,
+  and Shopify Customer Account OAuth 2.0 / OpenID Connect authentication (including
+  customer-account-mcp-api scopes). IM8 is a General Catalyst portfolio company added
+  to the API Evangelist network and enriched from its public agent-commerce surface.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://im8health.com/cdn/shop/files/im8-meta-image_1_-min.jpg
 url: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - general-catalyst
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: agent-commerce-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Health
+- Wellness
+- Supplements
+- Nutrition
+- Ecommerce
+- Direct-to-Consumer
+- Agentic Commerce
+- Shopify
+- UCP
+- MCP
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: IM8 Health Agent Commerce Surface
+  description: >-
+    The agent-native commerce surface of the IM8 Health Shopify storefront: a
+    Universal Commerce Protocol (UCP) merchant profile with a hosted MCP shopping
+    endpoint (catalog search, cart, checkout, fulfillment), read-only product/collection
+    JSON endpoints, and Shopify Customer Account OAuth 2.0 / OpenID Connect authentication.
+  humanURL: https://im8health.com/agents.md
+  baseURL: https://im8health.com
+  tags:
+  - Commerce
+  - Agentic Commerce
+  - UCP
+  - MCP
+  properties:
+  - type: LLMsTxt
+    url: llms/im8-llms.txt
+  - type: MCPServer
+    url: mcp/im8-mcp.yml
+  - type: WellKnown
+    url: well-known/im8-well-known.yml
+  - type: Authentication
+    url: authentication/im8-authentication.yml
+  - type: OAuthScopes
+    url: scopes/im8-scopes.yml
+  - type: Conformance
+    url: conformance/im8-conformance.yml
+common:
+- type: DomainSecurity
+  url: security/im8-domain-security.yml
+- type: Website
+  url: https://im8health.com
+- type: Documentation
+  url: https://im8health.com/agents.md
+- type: MCPServer
+  url: mcp/im8-mcp.yml
+- type: Authentication
+  url: authentication/im8-authentication.yml
+- type: OAuthScopes
+  url: scopes/im8-scopes.yml
+- type: WellKnown
+  url: well-known/im8-well-known.yml
+- type: LLMsTxt
+  url: llms/im8-llms.txt
+- type: Conformance
+  url: conformance/im8-conformance.yml
+- type: Blog
+  url: https://im8health.com/blogs/news
+- type: Login
+  url: https://im8health.com/account
+- type: PrivacyPolicy
+  url: https://im8health.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://im8health.com/policies/terms-of-service
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
