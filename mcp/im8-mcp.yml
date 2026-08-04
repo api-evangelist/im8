@@ -3,7 +3,8 @@ method: searched
 source: https://im8health.com/.well-known/ucp
 type: MCPServer
 name: IM8 Health UCP Shopping MCP
-status: live
+status: published
+status_raw: live
 transport: mcp
 description: >-
   Hosted Model Context Protocol (MCP) shopping endpoint exposed by the IM8 Health
