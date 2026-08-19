@@ -6,12 +6,10 @@ name: IM8 Health UCP Shopping MCP
 status: published
 status_raw: live
 transport: mcp
-description: >-
-  Hosted Model Context Protocol (MCP) shopping endpoint exposed by the IM8 Health
-  Shopify storefront via the Universal Commerce Protocol (UCP). Discovered from the
-  store's /.well-known/ucp merchant profile and /llms.txt agent guide. The endpoint
-  is live: a JSON-RPC POST returns a structured UCP response (HTTP 422 without an
-  agent profile URI), confirming a real MCP server rather than a 404.
+description: 'Hosted Model Context Protocol (MCP) shopping endpoint exposed by the IM8 Health Shopify
+  storefront via the Universal Commerce Protocol (UCP). Discovered from the store''s /.well-known/ucp
+  merchant profile and /llms.txt agent guide. The endpoint is live: a JSON-RPC POST returns a structured
+  UCP response (HTTP 422 without an agent profile URI), confirming a real MCP server rather than a 404.'
 endpoints:
   storefront: https://im8health.com/api/ucp/mcp
   canonical: https://im8store.myshopify.com/api/ucp/mcp
@@ -24,10 +22,8 @@ ucp:
   service: dev.ucp.shopping
   openrpc_schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
 authentication:
-  note: >-
-    Read-only browsing needs no auth; buyer-scoped actions use Shopify Customer
-    Account OAuth 2.0 / OIDC (see authentication/im8-authentication.yml and
-    scopes/im8-scopes.yml, incl. customer-account-mcp-api:full).
+  note: Read-only browsing needs no auth; buyer-scoped actions use Shopify Customer Account OAuth 2.0
+    / OIDC (see authentication/im8-authentication.yml and scopes/im8-scopes.yml, incl. customer-account-mcp-api:full).
 capabilities:
 - dev.ucp.shopping.catalog.search
 - dev.ucp.shopping.catalog.lookup
@@ -37,9 +33,6 @@ capabilities:
 - dev.ucp.shopping.discount
 - dev.ucp.shopping.order
 - dev.shopify.catalog
-# Tool names as documented in the store's /llms.txt "Typical Agent Flow".
-# Live tools/list requires an agent profile URI; use tools/list against the
-# endpoint with a valid UCP agent profile to enumerate exact schemas.
 tools:
 - name: search_catalog
   status: documented
@@ -64,3 +57,9 @@ payment_handlers:
 - com.google.pay
 - dev.shopify.card
 - dev.shopify.shop_pay
+deployment:
+  mode: unclear
+  verified: searched
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
