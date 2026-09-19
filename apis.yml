@@ -57,7 +57,7 @@ tags:
 - Direct to Consumer
 - Agentic Commerce
 - Shopify
-- UCP
+- Universal Commerce Protocol
 - MCP
 tags_raw:
 - Company
@@ -86,6 +86,11 @@ apis:
   humanURL: https://im8health.com/agents.md
   baseURL: https://im8health.com
   tags:
+  - Commerce
+  - Agentic Commerce
+  - Universal Commerce Protocol
+  - MCP
+  tags_raw:
   - Commerce
   - Agentic Commerce
   - UCP
