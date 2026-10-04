@@ -84,7 +84,6 @@ apis:
     endpoint (catalog search, cart, checkout, fulfillment), read-only product/collection
     JSON endpoints, and Shopify Customer Account OAuth 2.0 / OpenID Connect authentication.
   humanURL: https://im8health.com/agents.md
-  baseURL: https://im8health.com
   tags:
   - Commerce
   - Agentic Commerce
@@ -108,6 +107,9 @@ apis:
     url: scopes/im8-scopes.yml
   - type: Conformance
     url: conformance/im8-conformance.yml
+  x-surface: platform-generated
+  x-platform: shopify
+  x-platform-surface: ucp
 common:
 - type: DomainSecurity
   url: security/im8-domain-security.yml
