@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/im8/integrations
+- https://zapier.com/apps/im8-health/integrations
+- https://n8n.io/integrations/im8/
+- https://composio.dev/toolkits/im8
+- https://monid.ai/tools/im8
+checked:
+- https://composio.dev/toolkits/im8
+- https://monid.ai/tools/im8
+- https://n8n.io/integrations/im8/
+- https://zapier.com/apps/im8-health/integrations
+- https://zapier.com/apps/im8/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
