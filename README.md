@@ -1,4 +1,4 @@
-# Im8
+# IM8 Health
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Im8 is a company surfaced as a portfolio company of general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+IM8 Health is a health and wellness company whose flagship product, IM8 Daily Ultimate Essentials, is a clinically studied, third-party tested all-in-one daily supplement combining 90 nutrient-rich ingredients — vitamins, minerals, probiotics, prebiotics, adaptogens and superfoods — into a single drink that replaces roughly 16 capsules. Co-founded by David Beckham and guided by a named scientific advisory board, IM8 sells direct-to-consumer through its Shopify-powered online store at im8health.com. That storefront exposes a modern agent-native commerce surface: a Universal Commerce Protocol (UCP) merchant profile, a hosted Model Context Protocol (MCP) shopping endpoint, an llms.txt / agents.md guide for AI shopping assistants, and Shopify Customer Account OAuth 2.0 / OpenID Connect authentication (including customer-account-mcp-api scopes). IM8 is a General Catalyst portfolio company added to the API Evangelist network and enriched from its public agent-commerce surface.
 
-Backed by: general-catalyst
+**Areas:** Company · Health · Wellness · Supplements · Nutrition · E-Commerce · Direct to Consumer · Agentic Commerce · Shopify · Universal Commerce Protocol · MCP
+
+## IM8 Health on APIs.io
+
+Everything profiled for IM8 Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/im8/](https://apis.io/providers/im8/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [IM8 Health Agent Commerce Surface](https://apis.io/apis/im8/im8-health-agent-commerce-surface/) — The agent-native commerce surface of the IM8 Health Shopify storefront: a Universal Commerce Protocol (UCP) merchant profile with a hosted MCP shopping…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [IM8 Health UCP Shopping MCP](https://apis.io/servers/im8/im8-health-ucp-shopping-mcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Im8 Authentication](https://apis.io/security/im8/im8-authentication/)
+- [Im8 Domain Security](https://apis.io/security/im8/im8-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Im8 Scopes](https://apis.io/scopes/im8/im8-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://im8health.com)
+- [Documentation](https://im8health.com/agents.md)
+- [Blog](https://im8health.com/blogs/news)
+- [Terms of service](https://im8health.com/policies/terms-of-service)
+- [Privacy policy](https://im8health.com/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 21.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 63.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 27.6 |
+
+**Agent readiness 6.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 32.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/im8/](https://apis.io/providers/im8/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for IM8 Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/im8/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
